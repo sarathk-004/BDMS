@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+  
+<body>
+  <div class="navbar-cont">
+    <nav class="navbar">
+      <div class="navbar-brand" href="#">
+        <a href="index.html" class="gc-logo">Blood+ve</a>
+      </div>
+
+      <div class="profile-cont">
+        <div class="container">
+          <a class="nav-link" id="navItem1" href="#home" >Home</a>
+          <a class="nav-link" href="#about" id="">About</a>
+          <a class="nav-link" href="#contact1" id="">Contact Us</a>
+        </div>
+        <img id="profile" class="profile" width="48" height="48" src="https://img.icons8.com/material/24/user-male-circle--v1.png" alt="user-male-circle--v1" onclick="toggleDropdown()"/>
+        <div id="profile-dropdown" class="profile-dropdown">
+          <a href="login.html">Sign In</a>
+          <a href="signup.html">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+  <video id="background-video" autoplay loop muted>
+    <source src="recording~2.mp4" type="video/webm">
+  </video>
+
+  <div class="login-container">
+    <div class="login-cont">
+      <p class="login">Welcome to Blood+ve!</p>
+      <div class="login-form-cont">
+        <form id="loginForm" action="/login" method="post" onsubmit="login(event)">
+          <div class="form-row">
+            <div class="label-cont">
+              <label class="label" for="username">Username:</label>
+            </div>
+            <div class="input-cont">
+              <input class="input-field" placeholder="Enter your email" type="text" id="username" name="username" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="label-cont">
+              <label class="label" for="password">Password:</label>
+            </div>
+            <div class="input-cont">
+              <input class="input-field" placeholder="Enter password" type="password" id="password" name="password" required>
+            </div>
+          </div><br>
+          <button class="submit-button" type="submit">Login</button>
+        </form>
+      </div>
+
+      <div class="social-login">
+        <div class="social-icon">
+          <img class="login-icon" src="icons8-google-48.png"/>
+          <a href="https://accounts.google.co.in" class="social-link">Sign In with Google</a>
+        </div>
+        
+        <div class="social-icon">
+          <img class="login-icon" src="icons8-apple-30.png"/>
+          <a href="https://appleid.apple.com/sign-in" class="social-link">Sign In with Apple</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

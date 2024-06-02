@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Blood+ve</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body id = "homepage">
+  <div class="navbar-cont">
+    <nav class="navbar">
+      <div class="navbar-brand" href="#">
+        <a href="index.html" class="gc-logo">Blood+ve</a>
+      </div>
+      
+      <div class="profile-cont">
+        <div class="container">
+          <a class="nav-link" id="navItem1" href="#home" >Home</a>
+          <a class="nav-link" href="#about" id="">About</a>
+          <a class="nav-link" href="#contact1" id="">Contact Us</a>
+        </div>
+        <img id="profile" class="profile" width="48" height="48" src="https://img.icons8.com/material/24/user-male-circle--v1.png" alt="user-male-circle--v1" onclick="toggleDropdown()"/>
+        <div id="profile-dropdown" class="profile-dropdown">
+          <a href="login.html">Sign In</a>
+          <a href="signup.html">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <div id = "home" class="video-cont">
+    <div>
+      <video class="video" autoplay muted loop id="myVideo">
+          <source src="Blood 1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="banner-text-cont">
+      <h1 class="banner-text">Your <mark>little effort</mark> can give others a <mark>second chance</mark> at life!</h1>
+    </div>
+  </div>
+
+  <div class="products-container">
+    <h1 class="products-head" id="about">About Us</h1>
+    <p class="about-para">Welcome to our life-saving app, a revolutionary platform designed to <mark>bridge the gap between blood donors and those in urgent need of blood</mark>. In medical emergencies, every second counts, and our mission is to <mark>facilitate rapid and efficient blood donation</mark>, ensuring that life-saving blood reaches those who need it most, as quickly as possible. We leverage advanced technology and community collaboration to create a seamless and reliable blood donation network.</p>
+
+    <div class="products-card-1">
+      <div class="products-c1-text-cont">
+        <div class="products-text1">
+          <h1 class="product-name">How it Works</h1>
+            <ul>
+              <li>
+              <p class="product-price"><b>Seamless Connection:</b> Our app connects donors and recipients within a 10km radius, ensuring quick and efficient matches. By focusing on local connections, we minimize the time it takes for blood to reach those in need, enhancing the chances of saving lives.</p></li>
+              <li>
+              <p class="product-price"><b>Instant Notifications:</b> As soon as a match is found, both donors and recipients receive instant notifications. This real-time alert system ensures that the donation process can begin immediately, reducing delays and improving the overall efficiency of the system.</p></li>
+              <li>
+              <p class="product-price"><b>Ambulance Coordination: </b> We collaborate with nearby hospitals to ensure that an ambulance is dispatched promptly to collect the blood from the donor and deliver it to the recipient. Our app integrates with hospital systems to provide seamless coordination, ensuring that medical professionals are always in the loop.</p></li>
+              <li>
+              <p class="product-price"><b>Real-Time Tracking: </b>Both donors and recipients can track the ambulance in real-time, providing transparency and peace of mind. This feature allows all parties to be aware of the progress and expected arrival times, ensuring that the process is as smooth and stress-free as possible.</p></li>
+            </ul>
+        </div>
+        <div class="buy-now-cont">
+          <button class="buy-now">View More</button>
+        </div>
+      </div>
+      
+      <div>
+        <img class="prod-1-img" src="Blood 2.png"/>
+      </div>
+      
+    </div>
+
+    <div class="products-card-2">
+      <div>
+        <img class="prod-1-img" src="Blood 3.png"/>
+      </div>
+      <div class="products-c1-text-cont">
+        <div class="products-text2">
+          <h1 class="product-name">Our Mission</h1>
+          <p class="mission-para">We believe in the power of community and technology to save lives. By connecting donors and recipients in real-time and coordinating with local hospitals, we aim to create a robust network that ensures blood is always available when and where it’s needed most. Our goal is to build a system where no one has to wait for critical blood donations, and where every donation has the maximum possible impact.</p>
+        </div>
+        <div class="buy-now-cont">
+          <button class="buy-now">View More</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <h1 class="features-head">Features</h1>
+  <div class="features">
+    <div class="f1">
+      <h1 class="f1-head">Location-Based Matching</h1>
+      <div class="view-specs">
+        <button class="view-specs-button">+</button>
+      </div>
+    </div>
+
+    <div class="f23">
+      <div class="f2">
+        <h1 class="f1-head">Health and Safety</h1>
+        <div class="view-specs">
+          <button class="view-specs-button">+</button>
+        </div>
+      </div>
+
+      <div class="f3">
+        <h1 class="f1-head">Emergency Support</h1>
+        <div class="view-specs">
+          <button class="view-specs-button">+</button>
+        </div>
+      </div>
+
+      <div class="f4">
+        <h1 class="f1-head">Easy Registration</h1>
+        <div class="view-specs">
+          <button class="view-specs-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+
+  <div class="footer" id="contact1">
+    <div class="social-cont">
+      <h1 class="contact-head">Contact Us</h1>
+      <div class="soc-link-cont">
+        <a class="social-link" href="https://twitter.com"><img width="30" height="30" src="icons8-twitter-30.png"/><a>
+        <a class="social-link"
+          href="https://www.instagram.com/sarath_kothapalli/"><img width="30" height="30" src="icons8-instagram-30.png"/><a>
+        <a class="social-link" href="https://facebook.com"><img width="30" height="30" src="icons8-facebook-30.png"/><a>
+      </div>
+    </div>
+    <div class="row">
+      <a class="footer-link" href="#">Our Services</a>
+      <a class="footer-link" href="#">Privacy Policy</a>
+      <a class="footer-link" href="#">Terms & Conditions</a>
+    </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

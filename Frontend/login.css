@@ -1,0 +1,274 @@
+html,
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url("LoginBG.png");
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gc-logo {
+  font-family: "Inter Tight";
+  font-size: 30px;
+  color: #272727;
+  text-decoration: none;
+  margin-left: 80%;
+  font-weight: 500;
+  padding-right: 30px;
+}
+
+.navbar-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: rgb(236, 234, 234,0.9);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 0x solid rgba( 0, 0, 0, 0.18 );
+  position: fixed;
+  height: 80px;
+  z-index: 7;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: auto;
+
+}
+
+.vr-logo {
+  width: auto;
+  height: 50px;
+  margin-left: 50px;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  margin: 20px;
+  color: #272727;
+  text-decoration: 0;
+  font-family: "Inter Tight";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #cb1212;
+}
+
+.profile-cont {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 4%;
+}
+
+.profile-dropdown {
+  display: none;
+  flex-direction: column;
+  justify-content: end;
+  top: 100%;
+  width: 170px;
+  position: fixed;
+  background: rgba(39,39,39,0.8);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 0x solid rgba( 0, 0, 0, 0.18 );
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  z-index: 10;
+}
+
+.profile {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+
+.profile-dropdown a {
+  display: block; /* Display each option as a block */
+  padding: 10px;
+  text-decoration: none; /* Remove underline */
+  color: #e8e8e8; /* Text color */
+  font-family: "Inter Tight";
+  margin: 4px;
+  text-align: right;
+  font-size: 18px;
+
+}
+
+.profile-dropdown a:hover {
+  background-color: #cb1212;
+  color: #e8e8e8;
+  border-radius: 8px;
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+  height: fit-content; 
+}
+
+.login-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to top, #595959, #272727);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 0x solid rgba( 255, 255, 255, 0.18 );
+  padding:120px 65px 80px 80px;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  margin-bottom: 30px;
+}
+
+.login-form-cont {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-row {
+  margin-bottom: 20px;
+  justify-content: start;
+}
+
+.login{
+  font-family: "Inter Tight";
+  margin-top: -70px;
+  margin-bottom: 40px;
+  color: #f5f0f0;
+  font-size: 32px;
+  font-weight: 700;
+  margin-left: -25px;
+  text-align: center;
+}
+
+.label-cont {
+  display: flex;
+  justify-content: start;
+  font-family: "Inter Tight";
+  padding-bottom: 8px;
+  font-size: 22px;
+  color: #e8e8e8;
+  margin-left: -30px;
+}
+
+.input-cont {
+  display: flex;
+  justify-content: start;
+  width: 110%;
+}
+
+.input-field {
+  font-family: "Inter Tight";
+  color: #cb1212;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #272727;
+  background: transparent;
+  caret-color: #cb1212;
+  width: 100%;
+  word-wrap: break-word;
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-left: -30px;
+}
+
+
+.submit-button {
+  text-align: center;
+  background-color: #cb1212;
+  font-family: "Inter Tight";
+  color: #ffffff;
+  width: fit-content;
+  padding: 14px 30px 14px 30px;
+  border-radius: 35px;
+  text-decoration: 0;
+  font-size: 22px;
+  cursor: pointer;
+  border: 0px solid;
+}
+
+.login-or-cont{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.or {
+  font-family: "Inter Tight";
+}
+
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  align-content: center;
+
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ebe6e6;
+  font-family: "Inter Tight";
+  color: #272727;
+  width: 300px;
+  border-radius: 35px;
+  text-decoration: 0;
+  font-size: 18px;
+  padding: 14px 30px 14px 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+.login-icon {
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  margin: 4px;
+
+}
+
+.social-link {
+  text-decoration: none;
+  font-family: "Inter Tight";
+  color: #272727;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Management System</title>
+  <link rel="stylesheet" href="network.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar-cont">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="index.html" class="gc-logo">Blood+ve</a>
+      </div>
+
+      <div class="profile-cont">
+        <div class="container">
+          <a class="nav-link" id="navItem1" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#contact1">Contact Us</a>
+        </div>
+        <img id="profile" class="profile" width="48" height="48" src="https://img.icons8.com/material/24/user-male-circle--v1.png" alt="user-male-circle--v1" onclick="toggleDropdown()"/>
+        <div id="profile-dropdown" class="profile-dropdown">
+          <a href="login.html">Profile</a>
+          <a href="signup.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <section class="dashboard">
+      <div class="dashboard-buttons">
+        <div class="req-cont">
+          <div class="req-info-cont">
+            <div class="req-info">
+              <h1 class="req-head">Request Blood</h1>
+              <p class="req-para">Every day, countless individuals rely on the generosity of blood donors to survive and thrive. Whether it's for emergency surgeries, cancer treatments, or managing chronic illnesses, the need for blood is constant and critical. By requesting blood through our platform, you are taking a vital step towards saving lives and supporting those in need within your community.</p>
+              <div class="req-blood-btn-cont">
+                <img class="arrow" width="40" height="40" src="arrow.png"/>
+                <button class="req-button" id="requestBloodBtn">Request Now</button>
+              </div>
+            </div>
+            <div class="req-img-cont">
+              <img class="req-img" src="ReqBlood.png"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="req-cont">
+          <div class="req-info-cont">
+            <div class="req-info">
+              <h1 class="req-head">Become a Donor</h1>
+              <p class="req-para">Every few seconds, someone in the world needs blood, and your donation can be the lifeline they desperately need. By donating blood, you’re giving a simple yet powerful gift that can save lives, support medical research, and maintain a stable blood supply. Join us in this crucial effort and make a life-changing impact today. Your generosity can make all the difference.</p>
+              <div class="req-blood-btn-cont">
+                <img class="arrow" width="40" height="40" src="arrow.png"/>
+                <button class="req-button" id="becomeDonorBtn">Donate Now</button>
+              </div>
+            </div>
+            <div class="req-img-cont">
+              <img class="don-img" src="DonateBlood.png"/>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="donorRegister" class="form-section">
+      <h2>Donor Registration</h2>
+      <form id="donorForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="availableDays">Available Days:</label>
+        <input type="text" id="availableDays" name="availableDays" required>
+
+        <label for="availableTimings">Available Timings:</label>
+        <input type="text" id="availableTimings" name="availableTimings" required>
+
+        <label for="bloodTestCertificate">Blood Test Certificate:</label>
+        <input type="file" id="bloodTestCertificate" name="bloodTestCertificate" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="requestBlood" class="form-section">
+      <h2>Blood Request</h2>
+      <form id="requestForm">
+        <label for="requestorName">Name:</label>
+        <input type="text" id="requestorName" name="requestorName" required>
+
+        <label for="requestorPhone">Phone:</label>
+        <input type="text" id="requestorPhone" name="requestorPhone" required>
+
+        <label for="requestorEmail">Email:</label>
+        <input type="email" id="requestorEmail" name="requestorEmail" required>
+
+        <label for="requestorAge">Age:</label>
+        <input type="number" id="requestorAge" name="requestorAge" required>
+
+        <label for="requestorSex">Sex:</label>
+        <select id="requestorSex" name="requestorSex" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" required>
+
+        <label for="patientAge">Patient Age:</label>
+        <input type="number" id="patientAge" name="patientAge" required>
+
+        <label for="incidentLocation">Location of Incident:</label>
+        <input type="text" id="incidentLocation" name="incidentLocation" required>
+
+        <label for="criticalityLevel">Criticality Level:</label>
+        <input type="text" id="criticalityLevel" name="criticalityLevel" required>
+
+        <label for="timeline">Timeline:</label>
+        <input type="text" id="timeline" name="timeline" required>
+
+        <label for="patientBloodGroup">Patient Blood Group:</label>
+        <input type="text" id="patientBloodGroup" name="patientBloodGroup" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="network.js"></script>
+</body>
+</html>
+
+
