@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requestor Details Matching Screen</title>
+    <link rel="stylesheet" th:href="@{../styles.css}">
+</head>
+<body>
+	<div class="navbar-cont">
+		  <nav class="navbar">
+		    <div class="navbar-brand" href="#">
+		      <a href="index.html" class="gc-logo">Blood+ve</a>
+		    </div>
+
+		    <div class="profile-cont">
+		      <div class="container">
+		        <a class="nav-link" id="navItem1" href="#home" >Home</a>
+		        <a class="nav-link" href="#about" id="">About</a>
+		        <a class="nav-link" href="#contact1" id="">Contact Us</a>
+		      </div>
+		      <img id="profile" class="profile" width="48" height="48" src="https://img.icons8.com/material/24/user-male-circle--v1.png" alt="user-male-circle--v1" onclick="toggleDropdown()"/>
+		      <div id="profile-dropdown" class="profile-dropdown">
+		        <a href="login.html">Sign In</a>
+		        <a href="signup.html">Sign Up</a>
+		      </div>
+		    </div>
+		  </nav>
+		</div>
+    <div class="container">
+        <h2>Requestor Details Matching Screen</h2>
+        
+        <div th:if="${message != null}" class="message"> 
+           [[${message}]]
+        </div>
+          
+        <form 
+        
+        th:action="@{/requestorDetails}" 
+        method="post"
+        role="form"
+        th:object="${requestorDetails}"
+        >
+
+		<div class="input-group">
+		                <label for="id">Unique ID:</label>
+		                <input th:field="*{id}" type="text" id="id" name="id" placeholder="Unique ID" required>
+		</div>
+					
+            <div class="input-group">
+                <label for="requestorName">Requestor Name:</label>
+                <input th:field="*{requestorName}" type="text" id="requestorName" name="requestorName" placeholder="Enter requestor name" required>
+            </div>
+            <div class="input-group">
+                <label for="requestorPhone">Requestor Phone number:</label>
+                <input th:field="*{requestorPhone}" type="text" id="requestorPhone" name="requestorPhone" placeholder="Enter requestor phone number"  required>
+            </div>
+
+			<div class="input-group">
+			    <label for="requstorSex">Requestor Sex:</label>
+				<select name="requstorSex"  input th:field="*{requstorSex}" type="text" id="requstorSex" placeholder="Enter requestor sex" required>
+				    <option value="Male">Male</option>
+				    <option value="Female">Female</option>
+				  </select>
+				
+			</div>
+			<div class="input-group">
+			    <label for="requestorAge">Requestor Age:</label>
+			    <input th:field="*{requestorAge}" type="text" id="requestorAge" name="requestorAge" placeholder="Enter requestor age"  required>
+			</div>			
+			
+			<div class="input-group">
+			    <label for="patientName">Patient name:</label>
+			    <input th:field="*{patientName}" type="text" id="patientName" name="patientName" placeholder="Enter patient name"  required>
+			</div>
+			
+			<div class="input-group">
+			    <label for="patientAge">Patient Age:</label>
+			    <input th:field="*{patientAge}" type="text" id="patientAge" name="patientAge" placeholder="Enter patient age" required>
+			</div>
+			<div class="input-group">
+			    <label for="locationOfIncident">Location of Incident:</label>
+			    <input th:field="*{locationOfIncident}" type="text" id="locationOfIncident" name="locationOfIncident" placeholder="Enter location of incident"  required>
+			</div>
+			
+			<div class="input-group">
+						      <label for="criticalityLevel">Criticality Level:</label>
+							  <select name="criticalityLevel"  input th:field="*{criticalityLevel}" type="text" id="criticalityLevel" placeholder="Enter Criticality Level" required>
+							      <option value="Low">Low</option>
+							      <option value="Medium">Medium</option>
+								  <option value="High">High</option>
+							   </select>
+			</div>
+			
+			<div class="input-group">
+			    <label for="patientBloodGroup">Donar Blood Group:</label>
+				<select name="patientBloodGroup"  input th:field="*{patientBloodGroup}" type="text" id="patientBloodGroup" placeholder="Select Blood group" required>
+						<option value="O+">O+</option>
+						<option value="O-">O-</option>
+						<option value="A+">A+</option>
+						<option value="A-">A-</option>
+						<option value="B+">B+</option>
+						<option value="B-">B-</option>
+						<option value="AB+">AB+</option>
+						<option value="AB-">AB-</option>
+				</select>			
+
+
+			</div>    
+			
+			<div class="input-group">
+						      <label for="timeLine">Blood Required In:</label>
+							  <select name="timeLine"  input th:field="*{timeLine}" type="text" id="timeLine" placeholder="Select how much time you can afford to wait" required>
+							      <option value="Required in 30 mins">Required in 30 mins</option>
+							      <option value="Required in 1 hour">Required in 1 hour</option>
+								  <option value="Required in 3 hours">Required in 3 hours</option>
+							   </select>
+			</div>
+			
+		<div class="input-group">
+			    <label for="DonarMatchedId">DonarMatchedId:</label>
+			    <input th:field="*{DonarMatchedId}" type="text" id="DonarMatchedId" name="DonarMatchedId" placeholder="Enter DonarMatchedId" required>
+			</div>
+			
+
+			
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

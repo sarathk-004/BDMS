@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Requestor Details</title>
+  <style>
+    table {
+       border: 1px solid black;
+       border-collapse: collapse;
+       width: 100%;
+       font-size: 20px;
+       padding: 5px;
+    }
+    
+    th, td {
+    
+     border: 1px solid black;
+    }
+    
+    th {
+        background-color: #800000;
+        color: white;
+    
+    }
+    
+    td {
+    padding-left: 5px;
+    
+    }
+  
+  
+  </style>
+
+
+</head>
+<body>
+
+	<h2 style="color:#800000; text-align: center;">Requestor Details</h2>
+	<br>
+   <table>
+       <tr>
+		<th>Unique ID</th>
+         <th>Requestor Name</th>
+         <th>Requestor Phone</th>
+         <th>RequestorAge</th>
+         <th>Requestor Sex</th>
+         <th>Patient Name</th>
+         <th>Patient Age</th>
+		 <th>Location Of Incident</th>
+		 <th>Criticality Level</th>
+		 <th>Patient Blood Group</th>
+		 <th>TimeLine</th>
+		 <th>Donor Matched Id</th>
+       
+       </tr>
+        <tr  th:each="pd : ${requestorDetails}">
+		   <td  th:text="${pd.id}"></td>
+           <td  th:text="${pd.requestorName}"></td>
+           <td  th:text="${pd.requestorPhone}"></td>
+           <td  th:text="${pd.requestorAge}"></td>
+           <td  th:text="${pd.requstorSex}"></td>
+           <td  th:text="${pd.patientName}"></td>
+           <td  th:text="${pd.patientAge}"></td>
+		   <td  th:text="${pd.locationOfIncident}"></td>
+		   <td  th:text="${pd.criticalityLevel}"></td>
+		   <td  th:text="${pd.patientBloodGroup}"></td>
+		   <td  th:text="${pd.timeLine}"></td>
+		   <td  th:text="${pd.DonarMatchedId}"></td>
+        </tr>
+   
+   </table>
+
+</body>
+</html>

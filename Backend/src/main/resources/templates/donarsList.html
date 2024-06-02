@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Donor Details</title>
+  <style>
+    table {
+       border: 1px solid black;
+       border-collapse: collapse;
+       width: 100%;
+       font-size: 20px;
+       padding: 5px;
+    }
+    
+    th, td {
+    
+     border: 1px solid black;
+    }
+    
+    th {
+        background-color: #800000;
+        color: white;
+    
+    }
+    
+    td {
+    padding-left: 5px;
+    
+    }
+  
+  
+  </style>
+
+
+</head>
+<body>
+	
+	<h2 style="color:#800000; text-align: center;">Donor Details</h2>
+	<br>
+   <table>
+       <tr>
+		<th>Id</th>
+         <th>Name</th>
+         <th>Age</th>
+         <th>Sex</th>
+         <th>Phone Number</th>
+         <th>Address</th>
+         <th>Available Days</th>
+		 <th>Available Timings</th>
+		 <th>Approval</th>
+		 <th>Blood Group</th>
+       
+       </tr>
+        <tr  th:each="pd : ${donarDetails}">
+		   <td  th:text="${pd.id}"></td>
+           <td  th:text="${pd.name}"></td>
+           <td  th:text="${pd.age}"></td>
+           <td  th:text="${pd.sex}"></td>
+           <td  th:text="${pd.phoneNumber}"></td>
+           <td  th:text="${pd.address}"></td>
+           <td  th:text="${pd.availableDays}"></td>
+		   <td  th:text="${pd.availableTimings}"></td>
+		   <td  th:text="${pd.approval}"></td>
+		   <td  th:text="${pd.bloodGroup}"></td>
+        </tr>
+   
+   </table>
+
+</body>
+</html>

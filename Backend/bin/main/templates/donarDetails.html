@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donor Request Screen</title>
+    <link rel="stylesheet" th:href="@{../styles.css}">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<div class="navbar-cont">
+	  <nav class="navbar">
+	    <div class="navbar-brand" href="#">
+	      <a href="index.html" class="gc-logo">Blood+ve</a>
+	    </div>
+
+	    <div class="profile-cont">
+	      <div class="container">
+	        <a class="nav-link" id="navItem1" href="#home" >Home</a>
+	        <a class="nav-link" href="network.html" id="">Network</a>
+	        <a class="nav-link" href="#contact1" id=""></a>
+	      </div>
+	      <img id="profile" class="profile" width="48" height="48" src="https://img.icons8.com/material/24/user-male-circle--v1.png" alt="user-male-circle--v1" onclick="toggleDropdown()"/>
+	      <div id="profile-dropdown" class="profile-dropdown">
+	        <a href="login.html">Sign In</a>
+	        <a href="signup.html">Sign Up</a>
+	      </div>
+	    </div>
+	  </nav>
+	</div>
+    
+    <div class="form-cont">
+        <h2 class="form-head">Blood Donor Request</h2>
+        
+        <div th:if="${message != null}" class="message"> 
+           [[${message}]]
+        </div>
+        
+		
+        <form 
+        
+        th:action="@{/donarDetails}" 
+        method="post"
+        role="form"
+        th:object="${donarDetails}"
+        >
+			<div class="data-cont">
+            	<div class="input-group">
+                	<label class="label" for="name">Donar Name:</label>
+                	<input class="input-field" th:field="*{name}" type="text" id="name" name="name" placeholder="Enter your name" required>
+            	</div>
+            	<div class="input-group">
+                	<label class="label" for="age">Age:</label>
+                	<input class="input-field" th:field="*{age}" type="text" id="age" name="age" placeholder="Enter your age"  required>
+            	</div>
+            <div class="input-group">
+                <label class="label" for="sex">Sex:</label>
+				<select class="input-field" name="sex"  input th:field="*{sex}" type="text" id="sex" placeholder="Enter your sex" required>
+				    <option value="Male">Male</option>
+				    <option value="Female">Female</option>
+				  </select>
+				
+            </div>
+			<div class="input-group">
+			      <label class="label" for="emailId">Email Id:</label>
+			      <input class="input-field" th:field="*{emailId}" type="text" id="emailId" name="emailId" placeholder="Enter your Email Id" required>
+			</div>
+			
+			<div class="input-group">
+			    <label class="label" for="phoneNumber">Phone Number:</label>
+			    <input class="input-field" th:field="*{phoneNumber}" type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your Phone Number"  required>
+			</div>
+			<div class="input-group">
+			    <label class="label" for="address">Address:</label>
+			    <input class="input-field" th:field="*{address}" type="text" id="address" name="address" placeholder="Enter your Address" required>
+			</div>
+			<div class="input-group">
+			      <label class="label" for="availableDays">Available Days:</label>
+				  <select class="input-field" name="availableDays"  input th:field="*{availableDays}" type="text" id="availableDays" placeholder="Select your available days" required>
+				      <option value="Weekdays">Weekdays</option>
+				      <option value="Weekends">Weekends</option>
+					  <option value="Alldays">All Days</option>
+				   </select>
+			 </div>
+            
+			 
+			 <div class="input-group">
+			       <label class="label" for="availableTimings">Available Timings:</label>
+			 	  <select class="input-field" name="availableTimings"  input th:field="*{availableTimings}" type="text" id="availableTimings" placeholder="Select your available timings" required>
+			 	      <option value="6AM to 12PM">6AM to 12PM</option>
+			 	      <option value="2PM to 10PM">2PM to 10PM</option>
+			 		  <option value="6AM to 10PM">6AM to 10PM</option>
+			 	   </select>
+			  </div>
+			  
+			
+			<div class="input-group">
+			    <label class="label" for="imageBytes">Upload Blood Test Report:</label>
+			    <input class="input-field" th:field="*{imageBytes}" type="file" id="imageBytes" name="imageBytes"  required>
+			</div>
+			
+			<!--<div class="input-group">
+			      <label for="approval">Donar Approval:</label>
+			      <input th:field="*{approval}" type="approval" id="approval" name="approval" placeholder="Enter the approval" required>
+			</div>
+
+			<div class="input-group">
+			    <label for="bloodGroup">Donar Blood Group:</label>
+			    <input th:field="*{bloodGroup}" type="text" id="bloodGroup" name="bloodGroup" placeholder="Enter your blood group" required>
+			</div>-->
+		</div>
+			
+			
+            <button type="submit" class="btn">Submit</button>
+        </form>
+		</div>
+    </div>
+	<script>
+	        // JavaScript function to navigate to network.html
+	        document.getElementById('networkLink').addEventListener('click', function(event) {
+	            event.preventDefault(); // Prevent the default action of navigating to the href
+	            window.location.href = 'network.html'; // Navigate to network.html
+	        });
+	    </script>
+</body>
+
+</html>
