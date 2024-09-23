@@ -13,8 +13,5 @@ We have achieved the web-application using the following languages:
 HTML
 CSS
 JS
-Spring Boot MVC
-Java
 NodeJS
 MongoDB
-MySQL
